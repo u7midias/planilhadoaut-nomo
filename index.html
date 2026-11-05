@@ -161,7 +161,7 @@ footer a{color:#d6e7e0}
       <h1>Dormir sabendo <em>quanto sobrou.</em></h1>
       <p class="sub">Separe o dinheiro da casa e o do negócio. A planilha avisa quando as contas se misturam e mostra quanto você pode tirar de salário sem apertar o caixa.</p>
       <div class="acoes">
-        <a class="btn comprar" href="#preco">Quero a planilha por R$ 37</a>
+        <a class="btn comprar" href="https://pay.kiwify.com.br/GKNYB8Z">Quero a planilha por R$ 37</a>
         <div class="selos"><span>Pagamento único</span><span>Acesso na hora</span><span>7 dias de garantia</span></div>
       </div>
     </div>
@@ -251,7 +251,7 @@ footer a{color:#d6e7e0}
           <p class="pizza">Custa menos que a pizza de sexta. E fica com você.</p>
         </div>
         <div class="lado">
-          <a class="btn comprar" href="#preco">Quero a planilha</a>
+          <a class="btn comprar" href="https://pay.kiwify.com.br/GKNYB8Z">Quero a planilha</a>
           <div class="selos"><span>Pix ou cartão</span><span>Acesso na hora</span></div>
         </div>
       </div>
@@ -279,7 +279,7 @@ footer a{color:#d6e7e0}
   <div class="wrap">
     <h2>Feche o próximo mês <em>em paz.</em></h2>
     <p>Negócio de um lado, casa do outro. E você sabendo quanto é seu.</p>
-    <a class="btn comprar" href="#preco">Quero a planilha por R$ 37</a>
+    <a class="btn comprar" href="https://pay.kiwify.com.br/GKNYB8Z">Quero a planilha por R$ 37</a>
     <div class="selos"><span>Pagamento único</span><span>7 dias de garantia</span></div>
   </div>
 </section>
@@ -293,16 +293,16 @@ footer a{color:#d6e7e0}
 
 <div class="barra" id="barra" aria-hidden="true">
   <div><b>R$ 37</b><small>Pagamento único · 7 dias de garantia</small></div>
-  <a class="btn comprar" href="#preco" tabindex="-1">Quero a planilha</a>
+  <a class="btn comprar" href="https://pay.kiwify.com.br/GKNYB8Z" tabindex="-1">Quero a planilha</a>
 </div>
 
 <script>
-/* Cole aqui o link do checkout da Kiwify. Enquanto estiver vazio, os botões levam ao bloco de preço. */
-const CHECKOUT_URL = "";
+/* Link do checkout da Kiwify usado em todos os botões de compra. */
+const CHECKOUT_URL = "https://pay.kiwify.com.br/GKNYB8Z";
 
 (function () {
   if (CHECKOUT_URL) {
-    document.querySelectorAll(".comprar").forEach(function (a) { a.href = CHECKOUT_URL; a.target = "_blank"; a.rel = "noopener"; });
+    document.querySelectorAll(".comprar").forEach(function (a) { a.href = CHECKOUT_URL; });
   }
   // estrelas
   var ceu = document.getElementById("ceu");
