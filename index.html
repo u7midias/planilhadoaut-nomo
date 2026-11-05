@@ -1,6 +1,18 @@
 <title>Planilha do Autônomo</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Separe o dinheiro da casa e o do negócio. A Planilha do Autônomo avisa quando as contas se misturam e mostra quanto você pode tirar de salário.">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '26413033788398601');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=26413033788398601&ev=PageView&noscript=1"/></noscript>
+<!-- Fim Meta Pixel -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
@@ -303,6 +315,14 @@ const CHECKOUT_URL = "https://pay.kiwify.com.br/GKNYB8Z";
 (function () {
   if (CHECKOUT_URL) {
     document.querySelectorAll(".comprar").forEach(function (a) { a.href = CHECKOUT_URL; });
+  }
+  // Pixel: clique em qualquer botão de compra
+  document.querySelectorAll(".comprar").forEach(function (a) {
+    a.addEventListener("click", function () {
+      if (window.fbq) fbq("track", "ViewContent", { content_name: "Planilha do Autônomo", value: 37.00, currency: "BRL" });
+    });
+  });
+  if (true) {
   }
   // estrelas
   var ceu = document.getElementById("ceu");
